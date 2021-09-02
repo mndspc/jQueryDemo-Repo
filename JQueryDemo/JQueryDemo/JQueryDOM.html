@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery DOM demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("Text:" + $("#test").text());
+            });
+            $("#btn2").click(function () {
+                alert("HTML:" + $("#test").html());
+            });
+            $("#btn3").click(function () {
+                alert($("#w3s").attr("href"));
+            });
+
+            $("#btn4").click(function () {
+                $("#test1").text("Hello World");
+            });
+            $("#btn5").click(function () {
+                $("#test2").html("<b>Hello World</b>");
+            });
+            $("#btn6").click(function () {
+                $("#test3").val("dolly duck");
+            });
+            $("#btn7").click(function () {
+               $("#p1").append("<b>Appended P</b>")
+            });
+            $("#btn8").click(function () {
+                $("ol").append("<li>New List Item</li>")
+            });
+            $("#btn9").click(function () {
+                var text = "<div>This is new Div</div>";
+                $("body").append(text);
+                var text1 = document.createElement("p");
+                $("body").append(text1);
+            });
+            $("#btn10").click(function () {
+                var text1 = document.createElement("p");
+                text1.innerHTML = "This is new P";
+                $("body").append(text1);
+            });
+            $("#btn11").click(function () {
+                $("#div1").remove();
+            });
+            $("#btn12").click(function () {
+                $("#div1").empty();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+    <button id="btn3">Show href Value</button>
+
+
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+    <button id="btn4">Set Text</button>
+    <button id="btn5">Set HTML</button>
+    <button id="btn6">Set Value</button>
+
+
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2"> This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn7">Append text</button>
+    <button id="btn8">Append list items</button>
+    <button id="btn9">click here to add new div</button>
+    <button id="btn10">click here to add new Paragraph</button>
+    <div id="div1">This is to be removed</div>
+    <button id="btn11">click here to remove div1</button>
+    <button id="btn12">click here to remove div1 content</button>
+
+</body>
+</html>

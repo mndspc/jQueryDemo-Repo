@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery Slide Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$("#flip").click(function () {
+            //    $("#panel").slideDown("slow");
+            //});
+
+            //$("#flip").click(function () {
+            //    $("#panel1").slideUp("slow");
+            //});
+
+            $("#flip").click(function () {
+                $("#panel1").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="flip" style="background-color:burlywood;color:black">Click to slide down panel</div>
+    <div id="panel" style="background-color:brown;color:antiquewhite; display:none">Hello World</div>
+    <div id="panel1" style="background-color:brown;color:antiquewhite">Hello World</div>
+</body>
+</html>

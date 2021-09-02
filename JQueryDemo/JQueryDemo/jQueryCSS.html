@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery CSS Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").addClass("blue");
+                $("div").addClass("important");
+            });
+            $("#remove").click(function () {
+                $("h1,h2,p").removeClass("blue");
+                $("div").removeClass("important");
+            });
+            $("#toggle").click(function () {
+                $("h1,h2,p").toggleClass("blue");
+                $("div").toggleClass("important");
+            });
+            $("#btncss").click(function () {
+              
+                $("#div1").css("color","red");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <div>This is some important text!</div><br>
+
+    <button>Add classes to elements</button>
+    <button id="remove">Remove Classes from elements</button>
+    <button id="toggle">Toggle Classes to and from elements</button>
+    <div id="div1">This is decoreted through CSS method</div>
+    <button id="btncss">Click to apply inline CSS</button>
+
+</body>
+</html>
